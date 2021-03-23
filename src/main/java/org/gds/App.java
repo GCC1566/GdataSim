@@ -100,10 +100,10 @@ public class App {
 
     public static void main( String[] args )
     {
+        //获取模拟引擎
         Engine engine = EngineFactory.produceDefaultEngine();
 
         json = configUtil.getValueByConfigkey("modeldata");
-
         int num = Integer.parseInt(configUtil.getValueByConfigkey("number"));
 
         List<String> list = engine.getRandomSimluatorDatas(json,num);
@@ -114,6 +114,7 @@ public class App {
             jsonarray.add(JSONObject.parse(s));
         }
         json.put("data",jsonarray);
+        //将结果数据填至文件
         writeJsonFile(TimeFileName(),json);
 
 
