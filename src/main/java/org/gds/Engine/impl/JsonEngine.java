@@ -9,7 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * Json数据解析
+ * @author GCC
+ */
 public class JsonEngine extends Engine {
 
     private static Map<String, List<Object>> cache = new HashMap<>();
